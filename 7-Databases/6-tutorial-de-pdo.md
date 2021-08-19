@@ -68,7 +68,7 @@ try {
     $options = array(
       PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
     );
-    $dbh = new PDO($dsn, $user, $password);
+    $dbh = new PDO($dsn, $user, $password, $options);
 } catch (PDOException $e){
     echo $e->getMessage();
 }
