@@ -165,7 +165,7 @@ class Clientes
 }
 $cliente = new Clientes("Jennifer", "Málaga");
 $stmt = $dbh->prepare("INSERT INTO Clientes (nombre, ciudad) VALUES (:nombre, :ciudad)");
-if($stmt->execute((array) $cliente)){
+if($stmt->execute(array ($cliente)){
     echo "Se ha creado un nuevo registro!";
 };
 ```
